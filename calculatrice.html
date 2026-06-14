@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculatrice Simple</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .calculatrice {
+            background-color: #333;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 300px;
+        }
+
+        /* L'écran d'affichage */
+        #display {
+            width: 100%;
+            height: 60px;
+            background-color: #eaeaea;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: right;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #282525;
+        }
+
+        .boutons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* couleurs */
+        .chiffre {
+            background-color: #3545f0;
+            color: white;
+        }
+
+        .operateur {
+            background-color: #ff9f0a; /*actions*/
+            color: white;
+        }
+
+        .action-clear {
+            background-color: #ef3aff; 
+            color: white;
+            grid-column: span 3; 
+        }
+        
+        .action-egal {
+            background-color: #30d158; 
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculatrice">
+        <input type="text" id="display" readonly value="">
+        
+        <div class="boutons">
+            <button class="action-clear" onclick="effacerEcran()">C</button>
+            <button class="operateur" onclick="ajouterCaractere('/')">/</button>
+
+            <button class="chiffre" onclick="ajouterCaractere('7')">7</button>
+            <button class="chiffre" onclick="ajouterCaractere('8')">8</button>
+            <button class="chiffre" onclick="ajouterCaractere('9')">9</button>
+            <button class="operateur" onclick="ajouterCaractere('*')">×</button>
+
+            <button class="chiffre" onclick="ajouterCaractere('4')">4</button>
+            <button class="chiffre" onclick="ajouterCaractere('5')">5</button>
+            <button class="chiffre" onclick="ajouterCaractere('6')">6</button>
+            <button class="operateur" onclick="ajouterCaractere('-')">-</button>
+
+            <button class="chiffre" onclick="ajouterCaractere('1')">1</button>
+            <button class="chiffre" onclick="ajouterCaractere('2')">2</button>
+            <button class="chiffre" onclick="ajouterCaractere('3')">3</button>
+            <button class="operateur" onclick="ajouterCaractere('+')">+</button>
+
+            <button class="chiffre" style="grid-column: span 2;" onclick="ajouterCaractere('0')">0</button>
+            <button class="chiffre" onclick="ajouterCaractere('.')">.</button>
+            <button class="action-egal" onclick="calculerResultat()">=</button>
+        </div>
+    </div>
+
+    <script>
+        
+        
+        //Fonction pour ajouter un chiffre ou un opérateur à l'écran
+        function ajouterCaractere(caractere) {
+            const ecran = document.getElementById('display');
+            ecran.value += caractere;
+        }
+
+        // Fonction pour effacer l'écran (Bouton C)
+        function effacerEcran() {
+            document.getElementById('display').value = '';
+        }
+
+        //Fonction pour calculer le résultat (Bouton =)
+        function calculerResultat() {
+            const ecran = document.getElementById('display');
+            try {
+
+                if(ecran.value.trim() === "") return; // Ne rien faire si vide
+                ecran.value = eval(ecran.value);
+            } catch (erreur) {
+                // Si l'utilisateur a écrit une bêtise (ex: "5++/")
+                ecran.value = "Erreur";
+                setTimeout(() => effacerEcran(), 1500); // Efface "Erreur" après 1.5sec
+            }
+        }
+    </script>
+
+</body>
+</html>
