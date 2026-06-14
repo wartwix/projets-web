@@ -4,7 +4,7 @@ A simple functional calculator built with HTML, CSS and vanilla JavaScript.
 
 ## 🌐 Live Demo
 
-👉 **[https://wartwix.github.io/projets-web/](https://wartwix.github.io/projets-web/)**
+👉 **[https://wartwix.github.io/calculatrice/](https://wartwix.github.io/calculatrice/)**
 
 No download required — open the link and use it directly in your browser.
 
@@ -26,16 +26,16 @@ No download required — open the link and use it directly in your browser.
 No installation needed — just open the file in your browser:
 
 ```bash
-git clone https://github.com/wartwix/projets-web.git
-cd projets-web
-# Open calculatrice.html in your browser
+git clone https://github.com/wartwix/calculatrice.git
+cd calculatrice
+# Open index.html in your browser
 ```
 
 ## 📁 Project Structure
 
 ```
-projets-web/
-├── calculatrice.html
+calculatrice/
+├── index.html
 └── README.md
 ```
 
@@ -47,7 +47,7 @@ Une calculatrice simple et fonctionnelle en HTML, CSS et JavaScript vanilla.
 
 ## 🌐 Démo en ligne
 
-👉 **[https://wartwix.github.io/projets-web/](https://wartwix.github.io/projets-web/)**
+👉 **[https://wartwix.github.io/calculatrice/](https://wartwix.github.io/calculatrice/)**
 
 Aucun téléchargement nécessaire — ouvrez le lien et utilisez l'application directement dans votre navigateur.
 
@@ -69,15 +69,15 @@ Aucun téléchargement nécessaire — ouvrez le lien et utilisez l'application 
 Aucune installation requise — ouvrez simplement le fichier dans votre navigateur :
 
 ```bash
-git clone https://github.com/wartwix/projets-web.git
-cd projets-web
-# Ouvrir calculatrice.html dans un navigateur
+git clone https://github.com/wartwix/calculatrice.git
+cd calculatrice
+# Ouvrir index.html dans un navigateur
 ```
 
 ## 📁 Structure du projet
 
 ```
-projets-web/
-├── calculatrice.html
+calculatrice/
+├── index.html
 └── README.md
 ```
