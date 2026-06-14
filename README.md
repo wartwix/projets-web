@@ -6,7 +6,7 @@ A simple functional calculator built with HTML, CSS and vanilla JavaScript.
 
 👉 **[https://wartwix.github.io/calculatrice/](https://wartwix.github.io/calculatrice/)**
 
-No download required — open the link and use it directly in your browser.
+No download required , open the link and use it directly in your browser.
 
 ## 📋 Description
 
@@ -49,7 +49,7 @@ Une calculatrice simple et fonctionnelle en HTML, CSS et JavaScript vanilla.
 
 👉 **[https://wartwix.github.io/calculatrice/](https://wartwix.github.io/calculatrice/)**
 
-Aucun téléchargement nécessaire — ouvrez le lien et utilisez l'application directement dans votre navigateur.
+Aucun téléchargement nécessaire , ouvrez le lien et utilisez l'application directement dans votre navigateur.
 
 ## 📋 Description
 
